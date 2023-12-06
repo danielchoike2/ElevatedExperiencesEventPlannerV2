@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\fullcalendar\**" />
+    <Content Remove="wwwroot\lib\fullcalendar\**" />
+    <EmbeddedResource Remove="wwwroot\lib\fullcalendar\**" />
+    <None Remove="wwwroot\lib\fullcalendar\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\lib\fullcalendar\index.global.js" />
+    <Content Include="wwwroot\lib\fullcalendar\index.global.min.js" />
+    <Content Include="wwwroot\lib\fullcalendar\index.js" />
+    <Content Include="wwwroot\lib\fullcalendar\index.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Images\mainPagePicture.jpg" />
+  </ItemGroup>
+
+</Project>
